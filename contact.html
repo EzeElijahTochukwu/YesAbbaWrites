@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - YesAbba Writes</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your existing CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.jpg">
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="YesAbbawrites" class="logo">
+        <h1>YesAbba Writes</h1>
+        <p>Where creativity meets purpose...</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About Us</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a> <!-- Updated to link to the contact page -->
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Reach out to us, and we'll get back to you as soon as possible.</p>
+        
+        <!-- Contact Form -->
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        
+        
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Left Column: Contact Info -->
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><a href="tel:08127945747"><i class="fas fa-phone"></i> 08127945747</a></p>
+                <p><a href="tel:07031179735"><i class="fas fa-phone"></i> 07031179735</a></p>
+                <p><a href="mailto:info@yesabbawrites.online"><i class="fas fa-envelope"></i> info@yesabbawrites.online</a></p>
+                <p><a href="https://ng.linkedin.com/company/yesabba-writes?trk=public_post_feed-actor-name"><i class="fab fa-linkedin"></i> YesAbba Writes</a></p>
+                <p><a href="https://twitter.com/YesAbbawrites" target="_blank"><i class="fab fa-twitter"></i> @YesAbbawrites</a></p>
+            </div>
+
+            <!-- Right Column: Navigation Links and Logo -->
+            <div class="footer-right">
+                <img src="img/logo.jpg" alt="YesAbba Writes Logo" class="footer-logo">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">About Us</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="copyright">
+            <p>&copy; 2025 YesAbba Writes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function (event) {
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+        </script>
+        
+</body>
+</html>
